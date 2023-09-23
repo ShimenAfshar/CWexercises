@@ -61,5 +61,10 @@ function justify(str, len) {
         return word;
     });
     lines = lines.map(function (line) {
-
-    )     
+        if (line.indexOf(' ') >= 0)
+            for (var lineLen = line.length; lineLen < len;)
+                line = line.replace(/ +/g, function (spaces) {
+                    return spaces + (lineLen++ < len ? ' ' : '');
+                });
+        return line;
+    });
