@@ -68,3 +68,6 @@ function justify(str, len) {
                 });
         return line;
     });
+    lastLine && lines.push(lastLine);
+    return lines.join('\n');
+}
