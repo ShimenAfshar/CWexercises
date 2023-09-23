@@ -60,4 +60,6 @@ function justify(str, len) {
         }
         return word;
     });
-}
+    lines = lines.map(function (line) {
+
+    )     
